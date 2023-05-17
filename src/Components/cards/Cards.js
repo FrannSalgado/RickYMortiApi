@@ -12,7 +12,7 @@ import {
 
 const CharacterCards = (props) => {
   return (
-    <CardsContainer id={props.id}>
+    <CardsContainer id={props.id} onClick={() => props.openModal(props)}>
       <CardsImage src={props.image} alt={props.name}></CardsImage>
       <CardsInfoContainer>
         <CardsName>{props.name}</CardsName>
