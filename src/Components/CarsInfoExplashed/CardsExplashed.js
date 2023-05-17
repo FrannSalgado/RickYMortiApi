@@ -21,7 +21,7 @@ import { fetchEpisodeData } from "../Hooks/apiRequest";
 import Capitulos from "../enlaces/enlacesHBOMax";
 import ButtonCross from "../butttons/ButtonCross";
 
-const CardsExplashed = (props, { handleOnclick }) => {
+const CardsExplashed = (props) => {
   const {
     image,
     name,
@@ -68,7 +68,7 @@ const CardsExplashed = (props, { handleOnclick }) => {
   return (
     <CardsExplashedContainer>
       <CrucialInfoContainer>
-        <ButtonCross onClick={() => openModal({})}></ButtonCross>
+        <ButtonCross></ButtonCross>
         <CardsImageExplashed src={image} alt={name}></CardsImageExplashed>
         <CardDataContainerExplashed>
           <CardsNameExplashed>Name: {name}</CardsNameExplashed>
