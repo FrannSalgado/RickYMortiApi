@@ -51,9 +51,7 @@ function Home() {
         text="Siguiente"
       ></ButtonPortal>
 
-      {isOpen ? (
-        <CardsExplashed openModal={handleModal} {...modalInfo}></CardsExplashed>
-      ) : null}
+      {isOpen ? <CardsExplashed {...modalInfo}></CardsExplashed> : null}
     </HomeCardsContainer>
   );
 }
