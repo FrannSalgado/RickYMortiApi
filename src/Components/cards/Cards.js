@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   CardStatusContainer,
   CardsContainer,
@@ -9,10 +9,13 @@ import {
   CardsStatusPoint,
   CardsOrigin,
 } from "./cardsStyle";
-
+import { DataContext } from "../context/DataContexts";
+import { useModal } from "../Hooks/useModal";
 const CharacterCards = (props) => {
+  const handleModal = useModal(props);
+
   return (
-    <CardsContainer id={props.id} onClick={() => props.openModal(props)}>
+    <CardsContainer id={props.id} onClick={handleModal}>
       <CardsImage src={props.image} alt={props.name}></CardsImage>
       <CardsInfoContainer>
         <CardsName>{props.name}</CardsName>

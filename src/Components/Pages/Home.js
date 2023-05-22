@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getCharacters } from "../Hooks/apiRequest";
 import CharacterCards from "../cards/Cards";
-import {
-  HomeButtonNext,
-  HomeButtonNextContainer,
-  HomeCardsContainer,
-  Top,
-} from "./HomeStyled";
+import { HomeCardsContainer, Top } from "./HomeStyled";
 import ButtonPortal from "../butttons/ButtonPortal";
 import Navbar from "../navbar/Navbar";
 import CardsExplashed from "../CarsInfoExplashed/CardsExplashed";
-
+import { DataContext } from "../context/DataContexts";
+import { useModal } from "../Hooks/useModal";
 function Home() {
+  const { isOpen, setIsOpen, modalInfo, setModalInfo } =
+    useContext(DataContext);
+  const handleModal = useModal();
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
-  const [isOpen, setIsOpen] = useState(false);
-  const [modalInfo, setModalInfo] = useState({});
-
   useEffect(() => {
     async function fetchData() {
       const data = await getCharacters(page);
@@ -27,12 +23,6 @@ function Home() {
 
   const handleNextPage = () => {
     setPage(page + 1);
-  };
-  const handleModal = (props) => {
-    setIsOpen((state) => {
-      setIsOpen(!state);
-      state ? setModalInfo(null) : setModalInfo(props);
-    });
   };
 
   return (
