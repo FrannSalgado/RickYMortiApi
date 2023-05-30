@@ -11,7 +11,8 @@ export const CardsExplashedContainer = styled.div`
   z-index: 3;
   border-radius: 30px;
   overflow-y: hidden;
-  background-color: #424242f2;
+  background-color: rgb(66 66 66 / 60%);
+  backdrop-filter: blur(11px);
 `;
 
 export const CardsInfoContainerExplashed = styled.div`
@@ -73,7 +74,6 @@ export const CardsChaptersContainer = styled.div`
   text-align: start;
   overflow-y: scroll;
   padding-left: 1px;
-  background-color: #424242f2;
 `;
 export const CardsChapters = styled.a`
   color: white;

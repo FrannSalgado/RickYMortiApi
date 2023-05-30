@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { getCharacters } from "../Hooks/apiRequest";
 import CharacterCards from "../cards/Cards";
-import { HomeCardsContainer, Top } from "./HomeStyled";
+import { HomeCardsContainer, MesseksVdo, Top } from "./HomeStyled";
 import ButtonPortal from "../butttons/ButtonPortal";
 import Navbar from "../navbar/Navbar";
 import CardsExplashed from "../CarsInfoExplashed/CardsExplashed";
 import { DataContext } from "../context/DataContexts";
 import { useModal } from "../Hooks/useModal";
+import SrMesseks from "../messeks/SrMesseks";
+
 function Home() {
   const { isOpen, setIsOpen, modalInfo, setModalInfo } =
     useContext(DataContext);
@@ -28,6 +30,7 @@ function Home() {
   return (
     <HomeCardsContainer>
       <Navbar></Navbar>
+      <SrMesseks />
       <Top />
       {characters.map((character) => (
         <CharacterCards
