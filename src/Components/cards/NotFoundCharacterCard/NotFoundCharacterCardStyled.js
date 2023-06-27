@@ -21,6 +21,7 @@ export const AngryRickGif = styled.img`
 export const CharacterNotFoundText = styled.p`
   font-size: 20px;
   margin: 30px;
+  color: white;
 
   @media screen and (max-width: 550px) {
     font-size: 17px;
