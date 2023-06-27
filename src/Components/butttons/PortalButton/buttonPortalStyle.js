@@ -25,10 +25,13 @@ export const ButtonNextPortal = styled.button`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
-    font-family: "DM Serif Display", serif;
+    text-decoration: underline 3px;
+    font-family: "Rock Salt", cursive;
+    color: #19a0b8;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black, 0 0 10px yellow;
+    cursor: pointer;
   }
   :hover {
     span {

@@ -5,7 +5,6 @@ export const getCharacters = async (page) => {
     const response = await axios.get(
       `https://rickandmortyapi.com/api/character/?page=${page}`
     );
-    console.log(response.data.results);
     return response.data.results;
   } catch (error) {
     console.error(error);
@@ -22,6 +21,19 @@ export const fetchEpisodeData = async (episodeNumbers) => {
     return episodeData;
   } catch (error) {
     console.error("Error fetching episode data:", error);
+    return [];
+  }
+};
+
+export const getSearchCharacters = async (name) => {
+  try {
+    const responseSearchCharacter = await axios.get(
+      `https://rickandmortyapi.com/api/character/?name=${name}`
+    );
+
+    return responseSearchCharacter.data.results;
+  } catch (error) {
+    console.error();
     return [];
   }
 };

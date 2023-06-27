@@ -9,13 +9,12 @@ import {
   CardsStatusPoint,
   CardsOrigin,
 } from "./cardsStyle";
-import { DataContext } from "../context/DataContexts";
-import { useModal } from "../Hooks/useModal";
+import { DataContext } from "../../context/DataContexts";
 const CharacterCards = (props) => {
-  const handleModal = useModal(props);
+  const { handleModal } = useContext(DataContext);
 
   return (
-    <CardsContainer id={props.id} onClick={handleModal}>
+    <CardsContainer id={props.id} onClick={() => handleModal(props)}>
       <CardsImage src={props.image} alt={props.name}></CardsImage>
       <CardsInfoContainer>
         <CardsName>{props.name}</CardsName>

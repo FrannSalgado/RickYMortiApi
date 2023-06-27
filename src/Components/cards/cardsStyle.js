@@ -69,18 +69,6 @@ export const CardsStatusPoint = styled.div`
     `}
 `;
 
-{
-  /* <div>
-      {characters.map((character) => (
-        <div key={character.id}>
-          <h3>{character.name}</h3>
-          <p>{character.status}</p>
-          <img src={character.image} alt={character.name} />
-        </div>
-      ))}
-      <button onClick={handleNextPage}>Siguiente</button>
-    </div> */
-}
 export const CardsOrigin = styled.p`
   font-size: 12px;
 `;

@@ -9,6 +9,11 @@ import {
 } from "./navbarStyle";
 
 const Navbar = () => {
+  const handleScrollToTop = () => {
+    console.log("entro");
+    window.scrollTo(0, 100);
+  };
+
   return (
     <NavContainer>
       <IconContainer>
@@ -16,8 +21,7 @@ const Navbar = () => {
         <PageIconTitle src="https://occ-0-2705-993.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABekGfcjcxKQH35sJxlr2te1JNYCwXqpovwMvTf4gzZ1ihzzUY0M8YcEijgvL_ClD5aIMWEY-hKIZVmgthEVssV7SthGRm2xVXkuwzpphv6u0.png?r=a66"></PageIconTitle>
       </IconContainer>
       <NavLinksContainer>
-        <NavLinks>About</NavLinks>
-        <NavLinks>Home</NavLinks>
+        <NavLinks href="#top">Home</NavLinks>
       </NavLinksContainer>
     </NavContainer>
   );

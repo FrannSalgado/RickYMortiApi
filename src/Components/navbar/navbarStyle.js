@@ -10,11 +10,8 @@ export const NavContainer = styled.nav`
   background-color: #353535e3;
   position: sticky;
   top: 0%;
+  z-index: 45;
 `;
-
-// https://occ-0-2705-993.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABekGfcjcxKQH35sJxlr2te1JNYCwXqpovwMvTf4gzZ1ihzzUY0M8YcEijgvL_ClD5aIMWEY-hKIZVmgthEVssV7SthGRm2xVXkuwzpphv6u0.png?r=a66
-
-// https://media.cdn.adultswim.com/uploads/20220904/2294143541-RAMMobileHero.png
 
 export const IconContainer = styled.div`
   width: 25%;
@@ -29,6 +26,7 @@ export const PageIcon = styled.img`
   height: 80%;
   object-fit: cover;
   position: absolute;
+  left: 26px;
   top: 3%;
 `;
 export const PageIconTitle = styled.img`
@@ -36,7 +34,7 @@ export const PageIconTitle = styled.img`
   object-fit: cover;
   position: absolute;
   bottom: 0%;
-  right: 9%;
+  left: 10px;
 `;
 export const NavLinksContainer = styled.ul`
   display: flex;

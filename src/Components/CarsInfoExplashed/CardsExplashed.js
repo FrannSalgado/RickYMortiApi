@@ -17,9 +17,9 @@ import {
   CardsChaptersContainer,
 } from "./CardsExplashedStyled";
 import { CardStatusContainer } from "../cards/cardsStyle";
-import { fetchEpisodeData } from "../Hooks/apiRequest";
-import Capitulos from "../enlaces/enlacesHBOMax";
-import ButtonCross from "../butttons/ButtonCross";
+import { fetchEpisodeData } from "../../services/apiRequest";
+import Capitulos from "../../data/enlaces/enlacesHBOMax";
+import ButtonCross from "../butttons/ButtonCross/ButtonCross";
 
 const CardsExplashed = (props) => {
   const {
@@ -41,6 +41,7 @@ const CardsExplashed = (props) => {
     const getChapterNumber = () => {
       const episodeNumbers = episode.map((link) => {
         const episodeId = parseInt(link.split("/").pop());
+
         return episodeId;
       });
       setEpisodes(episodeNumbers);

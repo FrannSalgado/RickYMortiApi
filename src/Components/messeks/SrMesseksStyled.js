@@ -5,25 +5,30 @@ export const MesseksContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 300px;
+  min-width: 350px;
+  height: 10px;
   overflow: hidden;
+
   animation: scaleAnimation 3.5s forwards;
   @keyframes scaleAnimation {
     0% {
-      height: 40px;
+      height: 30px;
     }
+    30% {
+      height: 30px;
+    }
+
     100% {
       height: 400px;
     }
   }
 `;
 export const MesseksGif = styled.img`
-  /* position: absolute; */
-  bottom: 10px;
+  position: absolute;
+  bottom: 30px;
   left: 25%;
   right: 25%;
   width: 50%;
-  /* height: 50%; */
   z-index: 2;
   object-fit: scale-down;
 `;
@@ -34,22 +39,56 @@ export const PortalGifContainer = styled.div`
   align-items: flex-end;
   justify-content: center;
 
-  top: 0;
-  height: 300px;
+  height: 100%;
 `;
 export const PortalGif = styled.img`
   position: absolute;
-  bottom: 0;
-  height: 75px;
-  width: 100%;
+  top: -5px;
+  overflow-y: visible;
+  height: 35px;
+  width: 80%;
   z-index: 3;
-  animation: scaleAnimations 2.8s forwards;
+
+  animation: scaleAnimations 3.8s forwards;
   @keyframes scaleAnimations {
     0% {
-      top: 80%;
+      width: 0%;
+    }
+
+    25% {
+      width: 100%;
+    }
+
+    70% {
+      width: 100%;
+    }
+    85% {
+      height: 30px;
+    }
+
+    100% {
+      width: 0%;
+      height: 10px;
+    }
+  }
+`;
+
+export const SpechBubble = styled.img`
+  position: absolute;
+  width: 60%;
+  bottom: 63%;
+  right: -3px;
+  z-index: 15;
+  animation: spawnBubble 3s;
+  @keyframes spawnBubble {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
     }
     100% {
-      top: -10%;
+      opacity: 1;
     }
   }
 `;

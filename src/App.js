@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
-import getCharacters from "./Components/Hooks/apiRequest";
-import Home from "./Components/Pages/Home";
-import { DataProvider } from "./Components/context/DataContexts";
+import { DataProvider } from "./context/DataContexts";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (

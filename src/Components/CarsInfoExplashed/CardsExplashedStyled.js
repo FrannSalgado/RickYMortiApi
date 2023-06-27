@@ -8,11 +8,26 @@ export const CardsExplashedContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 40;
   border-radius: 30px;
   overflow-y: hidden;
   background-color: rgb(66 66 66 / 60%);
   backdrop-filter: blur(11px);
+
+  @media screen and (max-width: 710px) {
+    width: 450px;
+    height: 550px;
+    left: 48.5%;
+  }
+  @media screen and (max-width: 470px) {
+    width: 90%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 6px;
+  }
 `;
 
 export const CardsInfoContainerExplashed = styled.div`
@@ -21,6 +36,9 @@ export const CardsInfoContainerExplashed = styled.div`
   font-family: "Source Code Pro", monospace;
   width: 100%;
   height: 50%;
+  @media screen and (max-width: 435px) {
+    height: 30%;
+  }
 `;
 export const CrucialInfoContainer = styled.div`
   display: flex;
@@ -29,15 +47,32 @@ export const CrucialInfoContainer = styled.div`
   align-items: center;
   height: 50%;
   position: relative;
+
+  @media screen and (max-width: 435px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 65%;
+  }
 `;
 
 export const CardsImageExplashed = styled.img`
   border-radius: 10px;
   max-width: 35%;
+  @media screen and (max-width: 710px) {
+    min-width: 190px;
+  }
+  @media screen and (max-width: 470px) {
+    min-width: 180px;
+  }
 `;
 
 export const CardsNameExplashed = styled.h2`
-  text-align: center;
+  text-align: start;
+
+  @media screen and (max-width: 710px) {
+    font-size: 15px;
+  }
 `;
 export const CardDataContainerExplashed = styled.div`
   display: flex;
@@ -47,6 +82,15 @@ export const CardDataContainerExplashed = styled.div`
   gap: 6px;
   text-align: start;
   width: 40%;
+  min-width: 173px;
+  @media screen and (max-width: 710px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 435px) {
+    height: 50%;
+    gap: 3px;
+    width: 90%;
+  }
 `;
 
 export const CardsStatusExplashed = styled.div`
@@ -88,7 +132,6 @@ export const CardsChapters = styled.a`
   padding-left: 7px;
 
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 `;
 export const CardCity = styled.p``;
